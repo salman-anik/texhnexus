@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechNexus — a clean product showcase for earbuds, headphones and portable speakers.">
+  <meta name="theme-color" content="#f5f5f3">
+  <title>TechNexus — Audio Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#home" aria-label="TechNexus home">
+    <span class="brand-mark">T</span>
+    <span>TechNexus</span>
+  </a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+  </nav>
+  <a class="nav-collection" href="#collection">Explore <span>↗</span></a>
+  <button class="menu-btn" aria-label="Open menu">☰</button>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero hero-new" id="home">
+    <div class="hero-copy reveal-left">
+      <div class="eyebrow"><span></span> TECHNEXUS · AUDIO COLLECTION</div>
+      <h1>Sound.<br><em>Made simple.</em></h1>
+      <p>Discover everyday audio essentials with a clean look, useful features and prices that make sense.</p>
+      <div class="hero-actions">
+        <a class="primary-btn" href="#collection">Explore products <span>↘</span></a>
+        <div class="hero-count"><strong>05</strong><span>products<br>in collection</span></div>
+      </div>
+      <div class="hero-meta">
+        <span>Wireless audio</span><i></i><span>Bangladesh</span><i></i><span>Showcase</span>
+      </div>
+    </div>
+
+    <div class="hero-collage" aria-label="Featured TechNexus products">
+      <div class="collage-orb"></div>
+      <div class="collage-card card-back">
+        <span class="collage-index">02</span>
+        <img src="images/product-2.png" alt="Wireless earbuds with camera-style case">
+      </div>
+      <div class="collage-card card-main">
+        <span class="collage-index">03</span>
+        <img src="images/product-3.png" alt="Hoco EQ34 Plus ANC and ENC TWS">
+        <div class="collage-caption"><b>Hoco EQ34 Plus</b><span>ANC + ENC · ৳799</span></div>
+      </div>
+      <div class="collage-card card-front">
+        <span class="collage-index">05</span>
+        <img src="images/product-5.png" alt="DV-1008 wireless speaker">
+      </div>
+      <div class="floating-chip chip-top"><b>05</b><span>CURATED<br>PRODUCTS</span></div>
+      <div class="floating-chip chip-bottom"><span>FROM</span><b>৳499</b></div>
+    </div>
+
+    <div class="hero-scroll"><span>Scroll</span><div></div><span>01 — 05</span></div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>WIRELESS AUDIO</span><b>✦</b><span>SMART ACCESSORIES</span><b>✦</b>
+      <span>EVERYDAY SOUND</span><b>✦</b><span>TECHNEXUS</span><b>✦</b>
+      <span>WIRELESS AUDIO</span><b>✦</b><span>SMART ACCESSORIES</span><b>✦</b>
+      <span>EVERYDAY SOUND</span><b>✦</b><span>TECHNEXUS</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- COLLECTION INTRO -->
+  <section class="collection-head reveal" id="collection">
+    <div>
+      <div class="section-kicker">01 / THE COLLECTION</div>
+      <h2>Find your<br><i>sound.</i></h2>
+    </div>
+    <div class="collection-side">
+      <p>Five products, carefully presented. Browse the collection and open any product for a closer look.</p>
+      <div class="mini-stats">
+        <span><strong>05</strong> products</span>
+        <span><strong>৳499–799</strong> price range</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="featured reveal">
+    <div class="featured-image">
+      <div class="featured-label">FEATURED / 03</div>
+      <img src="images/product-3.png" alt="Hoco EQ34 Plus">
+    </div>
+    <div class="featured-copy">
+      <div class="section-kicker">FEATURED PRODUCT</div>
+      <h2>Hoco EQ34<br><i>Plus</i></h2>
+      <p>ANC + ENC TWS headset with a refined in-ear silhouette and a clean, modern charging case.</p>
+      <div class="feature-specs">
+        <div><span>01</span><strong>ANC + ENC</strong></div>
+        <div><span>02</span><strong>5.4 Wireless</strong></div>
+        <div><span>03</span><strong>13mm Driver</strong></div>
+      </div>
+      <div class="featured-bottom">
+        <strong>৳799</strong>
+        <button class="outline-btn" data-open="3">View product <span>↗</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLBAR -->
+  <section class="toolbar reveal">
+    <div class="search-wrap">
+      <span>⌕</span>
+      <input id="search" type="search" placeholder="Search the collection..." autocomplete="off">
+    </div>
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="TWS">TWS</button>
+      <button class="filter" data-filter="Neckband">Neckband</button>
+      <button class="filter" data-filter="Speaker">Speaker</button>
+    </div>
+  </section>
+
+  <section class="grid" id="productGrid"></section>
+  <p class="empty" id="empty">No products found.</p>
+
+  <!-- ABOUT -->
+  <section class="about reveal" id="about">
+    <div class="about-main">
+      <div class="section-kicker">02 / TECHNEXUS</div>
+      <h2>Simple products.<br><i>Clear choices.</i></h2>
+      <p>TechNexus is a clean product showcase built around the things that matter: what the product looks like, what it offers and how it fits into your everyday life.</p>
+    </div>
+    <div class="about-panel">
+      <div><strong>01</strong><span>Clean presentation</span></div>
+      <div><strong>02</strong><span>Responsive design</span></div>
+      <div><strong>03</strong><span>Product-first browsing</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a class="brand" href="#home"><span class="brand-mark">T</span><span>TechNexus</span></a>
+  <span>Product Showcase · 2026</span>
+  <a href="#home">Back to top ↑</a>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="close" data-close aria-label="Close">×</button>
+    <div class="modal-image"><img id="modalImage" src="" alt=""></div>
+    <div class="modal-info">
+      <div class="section-kicker" id="modalTag"></div>
+      <h2 id="modalTitle"></h2>
+      <div class="modal-price" id="modalPrice"></div>
+      <p id="modalDescription"></p>
+      <ul id="modalFeatures"></ul>
+    </div>
+  </div>
+</div>
+
+<script>
+document.documentElement.classList.add('js-ready');
+const products = [
+  {
+    "id": 1,
+    "name": "Premium TWS Earbuds",
+    "tag": "TWS Earbuds",
+    "price": 499,
+    "image": "images/product-1.png",
+    "description": "A clean, modern wireless-earbuds design for everyday listening, calls and casual use.",
+    "features": [
+      "True Wireless",
+      "Charging Case",
+      "Compact Design",
+      "Everyday Listening"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Q86 Retro Camera TWS",
+    "tag": "Wireless Earbuds",
+    "price": 499,
+    "image": "images/product-2.png",
+    "description": "A distinctive retro-camera-inspired charging case paired with a stylish TWS earbud design.",
+    "features": [
+      "Wireless 6.0",
+      "Digital Display Case",
+      "Retro Camera Style",
+      "Hi-Fi Design"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Hoco EQ34 Plus",
+    "tag": "ANC + ENC TWS",
+    "price": 799,
+    "image": "images/product-3.png",
+    "description": "Hoco EQ34 Plus wireless earbuds with an in-ear design and ANC + ENC positioning.",
+    "features": [
+      "ANC + ENC",
+      "5.4 Wireless",
+      "13mm Driver",
+      "In-ear Design"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Oraimo Buds 3 NEO",
+    "tag": "Neckband Earphones",
+    "price": 499,
+    "image": "images/product-4.png",
+    "description": "A lightweight neckband-style earphone focused on bass, calls and long listening sessions.",
+    "features": [
+      "ENC",
+      "High-Resolution Sound",
+      "540-hour Standby",
+      "365-day Warranty*"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "DV-1008 Wireless Speaker",
+    "tag": "Bluetooth Speaker",
+    "price": 499,
+    "image": "images/product-5.png",
+    "description": "A compact orange-and-black wireless speaker with a portable wrist strap and multiple playback options.",
+    "features": [
+      "5W Stereo",
+      "FM Radio",
+      "USB Disk",
+      "TF Card"
+    ]
+  }
+];
+
+const grid = document.getElementById('productGrid');
+const empty = document.getElementById('empty');
+const search = document.getElementById('search');
+let activeFilter = 'all';
+
+function categoryMatch(product, filter) {
+  if (filter === 'all') return true;
+  if (filter === 'TWS') return /TWS/i.test(product.tag);
+  if (filter === 'Neckband') return /Neckband/i.test(product.tag);
+  if (filter === 'Speaker') return /Speaker/i.test(product.tag);
+  return true;
+}
+
+function render() {
+  const q = search.value.trim().toLowerCase();
+  const list = products.filter(p =>
+    categoryMatch(p, activeFilter) &&
+    (p.name.toLowerCase().includes(q) || p.tag.toLowerCase().includes(q))
+  );
+
+  grid.innerHTML = list.map((p, i) => `
+    <article class="product-card reveal-card" data-id="${p.id}" style="--delay:${i * 70}ms">
+      <div class="product-image">
+        <span class="number">0${p.id}</span>
+        <span class="card-type">${p.tag}</span>
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+        <button class="view-btn" aria-label="View ${p.name}">View details <span>↗</span></button>
+      </div>
+      <div class="product-info">
+        <div>
+          <p class="product-tag">${p.tag}</p>
+          <h3>${p.name}</h3>
+        </div>
+        <strong>৳${p.price.toLocaleString('en-BD')}</strong>
+      </div>
+    </article>
+  `).join('');
+
+  empty.style.display = list.length ? 'none' : 'block';
+  grid.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', () => openModal(Number(card.dataset.id)));
+  });
+  requestAnimationFrame(() => {
+    grid.querySelectorAll('.reveal-card').forEach((el, i) => {
+      setTimeout(() => el.classList.add('revealed'), 40 + i * 80);
+    });
+  });
+}
+
+function openModal(id) {
+  const p = products.find(x => x.id === id);
+  document.getElementById('modalImage').src = p.image;
+  document.getElementById('modalImage').alt = p.name;
+  document.getElementById('modalTag').textContent = p.tag;
+  document.getElementById('modalTitle').textContent = p.name;
+  document.getElementById('modalPrice').textContent = `৳${p.price.toLocaleString('en-BD')}`;
+  document.getElementById('modalDescription').textContent = p.description;
+  document.getElementById('modalFeatures').innerHTML = p.features.map(x => `<li>${x}</li>`).join('');
+  document.getElementById('modal').classList.add('show');
+  document.getElementById('modal').setAttribute('aria-hidden', 'false');
+  document.body.classList.add('locked');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('show');
+  document.getElementById('modal').setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('locked');
+}
+
+document.querySelectorAll('.filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+});
+search.addEventListener('input', render);
+document.querySelectorAll('[data-close]').forEach(x => x.addEventListener('click', closeModal));
+document.querySelectorAll('[data-open]').forEach(x => x.addEventListener('click', (e) => {
+  e.stopPropagation();
+  openModal(Number(x.dataset.open));
+}));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+document.querySelector('.menu-btn').addEventListener('click', () => {
+  document.querySelector('.nav nav').classList.toggle('open');
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal, .reveal-left').forEach(el => revealObserver.observe(el));
+
+let ticking = false;
+function updateParallax() {
+  const y = window.scrollY;
+  document.querySelectorAll('.parallax-layer').forEach(el => {
+    const speed = Number(el.dataset.speed || 0.04);
+    const rect = el.parentElement.getBoundingClientRect();
+    if (rect.bottom > 0 && rect.top < window.innerHeight) {
+      el.style.setProperty('--scroll-y', `${y * speed}px`);
+    }
+  });
+  ticking = false;
+}
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(updateParallax);
+    ticking = true;
+  }
+}, { passive: true });
+
+const hero = document.querySelector('.hero');
+const heroArt = document.querySelector('.hero-art');
+if (hero && heroArt && window.matchMedia('(pointer:fine)').matches) {
+  hero.addEventListener('mousemove', (e) => {
+    const r = hero.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    heroArt.style.setProperty('--mx', `${x * 14}px`);
+    heroArt.style.setProperty('--my', `${y * 10}px`);
+  });
+  hero.addEventListener('mouseleave', () => {
+    heroArt.style.setProperty('--mx', '0px');
+    heroArt.style.setProperty('--my', '0px');
+  });
+}
+
+render();
+updateParallax();
+</script>
+</body>
+</html>
